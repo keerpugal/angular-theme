@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { takeUntil, first } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 
@@ -16,7 +16,7 @@ import { CoreConfigService } from '@core/services/config.service';
 export class AuthLoginV2Component implements OnInit {
   //  Public
   public coreConfig: any;
-  public loginForm: FormGroup;
+  public loginForm: UntypedFormGroup;
   public loading = false;
   public submitted = false;
   public returnUrl: string;
@@ -33,7 +33,7 @@ export class AuthLoginV2Component implements OnInit {
    */
   constructor(
     private _coreConfigService: CoreConfigService,
-    private _formBuilder: FormBuilder,
+    private _formBuilder: UntypedFormBuilder,
     private _route: ActivatedRoute,
     private _router: Router,
     private _authenticationService: AuthenticationService

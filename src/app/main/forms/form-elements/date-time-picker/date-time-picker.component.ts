@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 
 import { NgbDateStruct, NgbCalendar, NgbDate, NgbDateParserFormatter, NgbTimeStruct } from '@ng-bootstrap/ng-bootstrap';
 
@@ -66,7 +66,7 @@ export class DateTimePickerComponent implements OnInit {
   public spinnerTP = true;
 
   // Custom Validation Time Picker
-  public customValidationTP = new FormControl('', (control: FormControl) => {
+  public customValidationTP = new UntypedFormControl('', (control: UntypedFormControl) => {
     const value = control.value;
 
     if (!value) {

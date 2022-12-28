@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { UntypedFormControl, Validators } from '@angular/forms';
 
 import * as snippet from 'app/main/components/ratings/ratings.snippetcode';
 
@@ -20,7 +20,7 @@ export class RatingsComponent implements OnInit {
   public ERhovered = 0;
   public ERreadonly = false;
   public decimalCurrentRate = 2.25;
-  public ctrl = new FormControl(null, Validators.required);
+  public ctrl = new UntypedFormControl(null, Validators.required);
 
   // snippet code variables
   public _snippetCodeBasic = snippet.snippetCodeBasic;

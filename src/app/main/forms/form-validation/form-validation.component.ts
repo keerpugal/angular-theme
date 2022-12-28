@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 
 import * as snippet from 'app/main/forms/form-validation/form-validation.snippetcode';
 import { MustMatch } from './_helpers/must-match.validator';
@@ -20,7 +20,7 @@ export class FormValidationComponent implements OnInit {
   public TDNameVar;
   public TDEmailVar;
 
-  public ReactiveUserDetailsForm: FormGroup;
+  public ReactiveUserDetailsForm: UntypedFormGroup;
   public ReactiveUDFormSubmitted = false;
 
   // Reactive User Details form data
@@ -35,7 +35,7 @@ export class FormValidationComponent implements OnInit {
     phoneNumber: ''
   };
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: UntypedFormBuilder) {}
 
   // getter for easy access to form fields
   get ReactiveUDForm() {

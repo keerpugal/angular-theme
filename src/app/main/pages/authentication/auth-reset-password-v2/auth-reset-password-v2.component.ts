@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
@@ -17,7 +17,7 @@ export class AuthResetPasswordV2Component implements OnInit {
   public coreConfig: any;
   public passwordTextType: boolean;
   public confPasswordTextType: boolean;
-  public resetPasswordForm: FormGroup;
+  public resetPasswordForm: UntypedFormGroup;
   public submitted = false;
 
   // Private
@@ -29,7 +29,7 @@ export class AuthResetPasswordV2Component implements OnInit {
    * @param {CoreConfigService} _coreConfigService
    * @param {FormBuilder} _formBuilder
    */
-  constructor(private _coreConfigService: CoreConfigService, private _formBuilder: FormBuilder) {
+  constructor(private _coreConfigService: CoreConfigService, private _formBuilder: UntypedFormBuilder) {
     this._unsubscribeAll = new Subject();
 
     // Configure the layout

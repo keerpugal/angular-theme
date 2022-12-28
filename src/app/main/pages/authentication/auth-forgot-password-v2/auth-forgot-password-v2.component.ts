@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
@@ -16,7 +16,7 @@ export class AuthForgotPasswordV2Component implements OnInit {
   // Public
   public emailVar;
   public coreConfig: any;
-  public forgotPasswordForm: FormGroup;
+  public forgotPasswordForm: UntypedFormGroup;
   public submitted = false;
 
   // Private
@@ -29,7 +29,7 @@ export class AuthForgotPasswordV2Component implements OnInit {
    * @param {FormBuilder} _formBuilder
    *
    */
-  constructor(private _coreConfigService: CoreConfigService, private _formBuilder: FormBuilder) {
+  constructor(private _coreConfigService: CoreConfigService, private _formBuilder: UntypedFormBuilder) {
     this._unsubscribeAll = new Subject();
 
     // Configure the layout

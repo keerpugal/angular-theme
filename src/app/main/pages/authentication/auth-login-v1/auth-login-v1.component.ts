@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
@@ -15,7 +15,7 @@ import { CoreConfigService } from '@core/services/config.service';
 export class AuthLoginV1Component implements OnInit {
   //  Public
   public coreConfig: any;
-  public loginForm: FormGroup;
+  public loginForm: UntypedFormGroup;
   public submitted = false;
   public passwordTextType: boolean;
 
@@ -28,7 +28,7 @@ export class AuthLoginV1Component implements OnInit {
    * @param {CoreConfigService} _coreConfigService
    * @param {FormBuilder} _formBuilder
    */
-  constructor(private _coreConfigService: CoreConfigService, private _formBuilder: FormBuilder) {
+  constructor(private _coreConfigService: CoreConfigService, private _formBuilder: UntypedFormBuilder) {
     this._unsubscribeAll = new Subject();
 
     // Configure the layout
