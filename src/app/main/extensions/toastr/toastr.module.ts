@@ -22,16 +22,15 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [ToastrComponent, CustomToastrComponent],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes),
-    CoreCommonModule,
-    NgbModule,
-    ContentHeaderModule,
-    CardSnippetModule,
-    ToastrModule
-  ],
-  entryComponents: [CustomToastrComponent]
+    declarations: [ToastrComponent, CustomToastrComponent],
+    imports: [
+        CommonModule,
+        RouterModule.forChild(routes),
+        CoreCommonModule,
+        NgbModule,
+        ContentHeaderModule,
+        CardSnippetModule,
+        ToastrModule
+    ]
 })
 export class ToastrsModule {}
